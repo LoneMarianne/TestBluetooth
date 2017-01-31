@@ -27,10 +27,10 @@ function onMessage(data) {
 /*
  * bluetoothSerial.write sender data af formen 
  * ArrayBuffer, string, array of integers, or a Uint8Array.
- * I dette eksempel sendes en streng afsluttet med \n
+ * I dette eksempel sendes en streng 
  */
 function sendToArduino(data) {
-        bluetoothSerial.write(data + "\n");
+        bluetoothSerial.write(data);
 }
 
 
