@@ -5,7 +5,7 @@ var macAddress = "00:06:66:07:B1:B7";
 function onLoad(){
  document.addEventListener("deviceready", onDeviceReady, false);
 }
-function onDeviceRead(){
+function onDeviceReady(){
 	bluetoothSerial.connect(macAddress, onConnect, onDisconnect);
 }
 /* / onConnect kaldes bluetoothSerial.subscribe, der kaldes når data modtages
