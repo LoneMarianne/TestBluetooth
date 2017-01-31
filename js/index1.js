@@ -24,7 +24,7 @@ function onConnect() {
  */
 function onMessage(data) {
 	//document.getElementById("test").innerHTML +="onMessage" + data +"<br>";
-    document.getElementByID("fraArduino").innerHTML =""+ data;        
+    document.getElementById("fraArduino").innerHTML +=""+ data+"<br>";;        
 }
 /*
  * bluetoothSerial.write sender data af formen 
