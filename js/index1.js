@@ -1,12 +1,10 @@
 var macAddress = "00:06:66:07:B1:B7";
 
 function onLoad(){
-	document.getElementById("test").innerHTML +="onLoad";
 	document.addEventListener("deviceready", onDeviceReady, false);
 }
 
 function onDeviceReady(){
-	document.getElementById("test").innerHTML +="onDeviceRead";
 	bluetoothSerial.connect(macAddress, onConnect, onDisconnect);
 }
 
@@ -18,13 +16,14 @@ function onConnect() {
     bluetoothSerial.subscribe("\n", onMessage, subscribeFailed);
     document.getElementByID("statusDiv").innerHTML="Connected to " + macAddress + ".";        		
 }
+
 /*
  * Data vises i "fraArduinoDiv"
  */
 function onMessage(data) {
-	//document.getElementById("test").innerHTML +="onMessage" + data +"<br>";
     document.getElementById("fraArduino").innerHTML =""+ data;       
 }
+
 /*
  * bluetoothSerial.write sender data af formen 
  * ArrayBuffer, string, array of integers, or a Uint8Array.
