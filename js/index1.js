@@ -3,9 +3,11 @@ var macAddress = "00:06:66:07:B1:B7";
 
 
 function onLoad(){
+	document.getElementById("test").innerHTML +="onLoad";
  document.addEventListener("deviceready", onDeviceReady, false);
 }
 function onDeviceReady(){
+	document.getElementById("test").innerHTML +="onDeviceRead";
 	bluetoothSerial.connect(macAddress, onConnect, onDisconnect);
 }
 /* / onConnect kaldes bluetoothSerial.subscribe, der kaldes når data modtages
@@ -13,6 +15,7 @@ function onDeviceReady(){
  * Arduino-kommandoen println()
  */
 function onConnect() {
+	document.getElementById("test").innerHTML +="onConnect";
         bluetoothSerial.subscribe("\n", onMessage, subscribeFailed);
         document.getElementByID("statusDiv").innerHTML="Connected to " + macAddress + ".";        		
 }
@@ -20,6 +23,7 @@ function onConnect() {
  * Data vises i "fraArduinoDiv"
  */
 function onMessage(data) {
+	document.getElementById("test").innerHTML +="onMessage";
         document.getElementByID("fraArduinoDiv").innerHTML = data;        
 }
 /*
