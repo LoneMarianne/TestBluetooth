@@ -33,6 +33,7 @@ function sendToArduino(data) {
         bluetoothSerial.write(data + "\n");
 }
 
+
 function onDisconnect() {
         alert("Disconnected");
         statusDiv.innerHTML="Disconnected.";
