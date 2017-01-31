@@ -18,14 +18,13 @@ function onConnect() {
     bluetoothSerial.subscribe("\n", onMessage, subscribeFailed);
     document.getElementByID("statusDiv").innerHTML="Connected to " + macAddress + ".";        		
 }
-
 /*
  * Data vises i "fraArduinoDiv"
  */
 function onMessage(data) {
-    document.getElementById("fraArduino").innerHTML +=""+ data+"<br>";;        
+	document.getElementById("test").innerHTML +="onMessage" + data +"<br>";
+    document.getElementById("fraArduino").innerHTML =""+ data+"<br>";       
 }
-
 /*
  * bluetoothSerial.write sender data af formen 
  * ArrayBuffer, string, array of integers, or a Uint8Array.
