@@ -1,3 +1,4 @@
+//Adressen på Bluetooth Mate, Password er 1234
 var macAddress = "00:06:66:07:B1:B7";
 
 function onLoad(){
@@ -8,7 +9,7 @@ function onDeviceReady(){
 	bluetoothSerial.connect(macAddress, onConnect, onDisconnect);
 }
 
-/* / onConnect kaldes bluetoothSerial.subscribe, der kaldes når data modtages
+/* I onConnect kaldes bluetoothSerial.subscribe, der kaldes når data modtages
  * data skal sendes med et slut tegn i dette eksempel er det \n, der indgår i
  * Arduino-kommandoen println()
  */
@@ -18,7 +19,7 @@ function onConnect() {
 }
 
 /*
- * Data vises i "fraArduinoDiv"
+ * Data vises i "fraArduino"
  */
 function onMessage(data) {
     document.getElementById("fraArduino").innerHTML =""+ data;       
