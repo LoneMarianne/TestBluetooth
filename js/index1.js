@@ -22,8 +22,8 @@ function onConnect() {
  * Data vises i "fraArduinoDiv"
  */
 function onMessage(data) {
-	document.getElementById("test").innerHTML +="onMessage" + data +"<br>";
-    document.getElementById("fraArduino").innerHTML =""+ data+"<br>";       
+	//document.getElementById("test").innerHTML +="onMessage" + data +"<br>";
+    document.getElementById("fraArduino").innerHTML =""+ data;       
 }
 /*
  * bluetoothSerial.write sender data af formen 
