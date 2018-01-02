@@ -1,6 +1,6 @@
 //Adressen på Bluetooth Mate, Password er 1234
 var macAddress = "00:15:83:00:41:D0";
-var uuid = "0xFFE0";
+
 
 
 function onLoad(){
@@ -8,8 +8,8 @@ function onLoad(){
 }
 
 function onDeviceReady(){
-	//bluetoothSerial.connect(macAddress, onConnect, onDisconnect);
-	bluetoothSerial.connect(uuid, onConnect, onDisconnect);
+	bluetoothSerial.connect(macAddress, onConnect, onDisconnect);
+	
 }
 
 /* I onConnect kaldes bluetoothSerial.subscribe, der kaldes når data modtages
