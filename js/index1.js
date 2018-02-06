@@ -1,5 +1,5 @@
 //Adressen på Bluetooth Mate, Password er 1234
-var macAddress = "00:15:83:00:41:D0";
+var macAddress = "E3:C2:77:AB:66:72";
 
 
 
